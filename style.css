@@ -1,0 +1,136 @@
+:root {
+    --main-gray:#4E5150;
+    --light-gray:#A9A9A9;
+    --filler-gray: #E5E5E5;
+
+    --monststerat: 'Montserrat', sans-serif;
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,600;0,700;1,300;1,600&display=swap');
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: var(--monststerat);
+}
+
+img {border-radius: 1rem;}
+
+.header-container{
+    display: grid;
+    place-items: center;
+    /* max-width: 10rem; */
+    margin: 1.9rem auto;
+}
+
+.header-container img {
+    display: block;
+    width: 100%;
+    max-width: 6.25rem;
+}
+
+.header-container h1 {
+    color: var(--main-gray);
+    font-weight: 700;
+    font-size: .875rem;
+    margin-top: .75rem;
+}
+
+.header-container p{
+    color: var(--light-gray);
+    font-weight: 600;
+    font-size: .625rem;
+    line-height: 12px;
+    margin-top: 4px;
+    margin-bottom: .625rem;
+}
+
+.social-details {
+    display: flex;
+    gap: 1rem;
+    
+}
+
+.card {
+    border-radius: .625rem;
+    text-align: center;
+    background: var(--filler-gray);
+    padding: 1rem;
+}
+
+.card h3 {
+    font-size: .75rem;
+    color: var(--main-gray);
+}
+
+.card h4 {
+    font-size: .75rem;
+    color: var(--light-gray);
+}
+
+.grid-container {
+    width: 95vw; 
+    margin: 0 auto;
+
+    display: grid;
+    /* gap: 1rem; */
+    
+
+    grid-template-areas: "item-1 item-2 item-2"
+                        "item-3 item-3 item-4"
+                        "item-6 item-5 item-4";
+                        
+    gap: 1rem;
+}
+
+.grid-container img {
+    width: 100%;
+    height: 100%;
+    
+}
+
+/* .itm {
+    display: grid;
+    place-items: stretch stretch;
+} */
+
+.item-1 {
+    grid-area: item-1;
+}
+
+.item-2 {
+    display: grid;
+    grid-area: item-2;
+    grid-column: 2 / -1;
+    
+}
+
+.item-3 {
+    grid-area: item-3;
+}
+
+.item-4 {
+    grid-area: item-4;
+}
+
+.item-5 {
+    grid-area: item-5;
+}
+
+.item-6 {
+    grid-area: item-6;
+}
+
+.credentials {
+    text-align: center;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+@media screen and (min-width: 45rem){
+    .grid-container {
+        max-width: 800px;
+        margin: 4rem auto;
+    }
+}
